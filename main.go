@@ -8,5 +8,8 @@ import (
 )
 
 func main() {
+	// main configure作る
+	// controller 作る　configure渡す
+	// controller run
 }
 

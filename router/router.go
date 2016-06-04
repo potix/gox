@@ -5,16 +5,15 @@ import (
 	"github.com/potix/plugger"
 )
 
-type Gox struct {
-
+type Router struct {
+	// ルーティングするときfilterhookを呼び出す
+	filterhook func(XXXX) XXXX
 }
 
-func (g *Gox)Run() {
-	var config = flag.String("c", "/etc/gox.conf", "gox config file path")
+func (g *Router)Run() {
 }
 
-func NewGox() *Gox {
-	return &Gox
+func NewRouter() *Router {
+	return &Router{}
 }
-
 
