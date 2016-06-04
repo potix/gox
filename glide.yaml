@@ -1,0 +1,5 @@
+package: github.com/potix/gox
+version: ""
+import:
+- package: github.com/gin-gonic/gin
+- package: github.com/potix/plugger
