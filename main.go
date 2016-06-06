@@ -1,8 +1,8 @@
 package main
 
 import (
-	"os"
 	"github.com/potix/gox/controller"
+	"os"
 )
 
 func main() {
