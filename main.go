@@ -1,15 +1,14 @@
 package main
 
 import (
-	"github.com/potix/gox/router"
-	"github.com/potix/gox/downloader"
-	"github.com/potix/gox/configure"
+	"os"
 	"github.com/potix/gox/controller"
 )
 
 func main() {
-	// main configure作る
-	// controller 作る　configure渡す
-	// controller run
+	err := controller.Run()
+	if err != nil {
+		os.Exit(1)
+	}
+	os.Exit(0)
 }
-

@@ -10,8 +10,15 @@ type immutableConfig struct {
 	ControllerPort    string `toml:"controllerPort"`
 }
 
-type mutableConfig struct {
+type FilterRule {
+	Direction string
+	SrcPluginName string
+	DestPluginName string
+	FilterPluginName string
+}
 
+type mutableConfig struct {
+	FileterRules []FilterRule
 }
 
 type Config struct {
@@ -19,7 +26,7 @@ type Config struct {
 	*mutableConfig
 }
 
-func LoadConfig(configPath string) (config *Config, err error) {
+func Load(configPath string) (config *Config, err error) {
     config = new(Config)
     _, err = toml.DecodeFile(configPath, config)
     if err != nil {

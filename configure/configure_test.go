@@ -5,7 +5,7 @@ import (
 )
 
 func TestLoad(t *testing.T) {
-	config, err := LoadConfig("./test/test_config")
+	config, err := Load("./test/test_config")
 	if err != nil {
 		t.Error(err.Error())
 		t.FailNow()
